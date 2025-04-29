@@ -14,17 +14,17 @@ object tito {
         * self.inerciaBase() / self.peso()
     }
 }
-
 object wisky {
     method rendimiento(cantidad) = 0.9 ** cantidad
 }
 object cianuro {
     method rendimiento(cantidad) = 0
 }
-
 object terere {
     method rendimiento(cantidad) {
         return 1.max(cantidad * 0.1)
         //tambien (cantidad * 0.1).max(1)
     }
+}
+object licuadoFrutas{
 }
