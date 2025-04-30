@@ -36,3 +36,31 @@ object licuadoFrutas{
         return nutrientes.add(unNutriente)
     }
 }
+object aguaSaborizada{
+    var composicionBebida = 0.25  // inicializada
+    method rendimiento(cantidad){
+        return 1 + composicionBebida
+    }
+    method composicion(nuevaProporcion){
+        composicionBebida = nuevaProporcion
+    }
+}
+object coctel{
+    const bebidas = [ ] // vacia
+    method rendimiento(cantidad){
+        // le digo que me filtre la lista sacando el cianuro
+        return 
+        bebidas.filter({p=> !p.cianuro()}) &&
+        // trasformo las bebidas es numero 
+        bebidas.sum({p=> p.rendimiento(cantidad)}) 
+        * bebidas.size()
+        // multiplico por tamaño
+    }
+}
+object coctelSuave {
+    const bebidasCoctel = [ ] //vacia
+    method rendimiento(cantidad){
+        // al sum ---> le pongo una condicicon
+        bebidasCoctel.sum({p=> p.rendimiento(cantidad) > 0.5})
+    }
+}
