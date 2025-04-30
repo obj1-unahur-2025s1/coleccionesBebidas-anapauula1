@@ -27,4 +27,12 @@ object terere {
     }
 }
 object licuadoFrutas{
+    const nutrientes = [ ] // lista vacia
+    // se conocen los nutrientes
+    method rendimiento(cantidad){
+       return cantidad * nutrientes.sum()
+    }
+    method agregarNutrientes(unNutriente){
+        return nutrientes.add(unNutriente)
+    }
 }
